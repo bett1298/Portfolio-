@@ -1,4 +1,4 @@
-hi<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -19,7 +19,6 @@ hi<!DOCTYPE html>
       line-height: 1.6;
     }
 
-    /* Splash screen styles */
     .splash-screen, .main-content {
       position: absolute;
       top: 0;
@@ -27,6 +26,7 @@ hi<!DOCTYPE html>
       width: 100%;
       transition: opacity 1s ease;
     }
+
     .splash-screen {
       height: 100vh;
       background-color: #00897b;
@@ -37,6 +37,7 @@ hi<!DOCTYPE html>
       align-items: center;
       z-index: 2;
     }
+
     .splash-screen .profile-pic {
       width: 100px;
       height: 100px;
@@ -45,6 +46,7 @@ hi<!DOCTYPE html>
       border: 3px solid white;
       margin-bottom: 20px;
     }
+
     .spinner {
       border: 6px solid #ffffff50;
       border-top: 6px solid white;
@@ -54,34 +56,47 @@ hi<!DOCTYPE html>
       animation: spin 1s linear infinite;
       margin-bottom: 20px;
     }
+
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
-    }
-    .splash-screen h2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-    .splash-screen p {
-      font-size: 1rem;
-      color: #c8f8f3;
     }
 
     .main-content {
       opacity: 0;
       z-index: 1;
     }
+
     .main-content.visible {
       opacity: 1;
     }
 
-    /* Main portfolio styles */
     header {
       background-color: #00897b;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
+
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f4f7f9;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff9800;
+    }
+
     .main-content .profile-pic {
       width: 120px;
       height: 120px;
@@ -90,41 +105,59 @@ hi<!DOCTYPE html>
       border: 3px solid white;
       margin-bottom: 1rem;
     }
+
     .hero h1 {
       font-size: 2.5rem;
       margin: 0.2rem 0;
     }
+
     .hero p {
       font-size: 1.2rem;
     }
-    .btn {
+
+    .btn, .contact-btn, .ngeno-button {
       display: inline-block;
-      margin-top: 1rem;
       padding: 0.8rem 1.5rem;
       background-color: #00695c;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
     }
-    .btn:hover {
+
+    .btn:hover, .contact-btn:hover {
       background-color: #004d40;
     }
+
+    .ngeno-button {
+      background-color: #004aad;
+      border-radius: 8px;
+    }
+
+    .ngeno-button:hover {
+      background-color: #003080;
+    }
+
     section {
       padding: 3rem 1rem;
       max-width: 1000px;
       margin: auto;
     }
+
     h2 {
       color: #00695c;
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+
     .projects, .skills {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
+
     .card {
       background: white;
       padding: 1.5rem;
@@ -132,32 +165,23 @@ hi<!DOCTYPE html>
       box-shadow: 0 2px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-10px);
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
+
     footer {
       background: #00695c;
       color: white;
       text-align: center;
       padding: 1.5rem;
     }
+
     footer p {
       font-size: 0.9rem;
     }
-    .contact-btn {
-      display: inline-block;
-      padding: 0.7rem 1.2rem;
-      background-color: #00695c;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-    .contact-btn:hover {
-      background-color: #004d40;
-    }
+
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
@@ -168,32 +192,14 @@ hi<!DOCTYPE html>
       .btn {
         padding: 0.6rem 1.2rem;
       }
-      nav {
-  background-color: #333;
-  padding: 10px 20px;
-  text-align: center;
-}
-
-nav a {
-  color: #f4f7f9;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #ff9800;
-}
     }
   </style>
 </head>
 <body>
-o
+
   <!-- Splash screen -->
   <div class="splash-screen" id="splash">
-        <img src="https://i.ibb.co/chZcYSVh/your-image.jpg" alt="Bett" class="profile-pic" />
+    <img src="https://i.ibb.co/chZcYSVh/your-image.jpg" alt="Bett" class="profile-pic" />
     <div class="spinner"></div>
     <h2>Please wait...</h2>
     <p>Welcome to Bett's Portfolio</p>
@@ -201,24 +207,22 @@ o
 
   <!-- Main content -->
   <div class="main-content" id="main">
-
     <header class="hero">
       <img src="https://i.ibb.co/chZcYSVh/your-image.jpg" alt="Bett Profile" class="profile-pic">
       <h1>Hi, I’m Bett</h1>
       <p>I build smart apps & real-world tech solutions</p>
-      
-        <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-    <a href="#projects">My Work</a>
-  </nav>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="#projects">My Work</a>
+      </nav>
     </header>
 
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I'm a passionate developer focused on solving real-life problems through technology. 
+        I'm a passionate developer focused on solving real-life problems through technology.
         I specialize in mobile and web app development, and I’m currently working on smart waste 
         management, fraud detection dashboards, and the Mchango fundraiser system.
       </p>
@@ -229,7 +233,7 @@ o
       <div class="projects">
         <div class="card">
           <h3>FarmerApp</h3>
-          <p>Connect farmers to buyers with ease and transparency."</p>
+          <p>Connect farmers to buyers with ease and transparency.</p>
           <a href="https://github.com/Manuubett/farmer.git" class="btn" target="_blank">View on GitHub</a>
         </div>
         <div class="card">
@@ -237,18 +241,19 @@ o
           <p>Fundraising tracker app with Firebase, real-time updates, and M-Pesa integration.</p>
           <a href="https://github.com/Manuubett/mchango-tracker.git" class="btn" target="_blank">View on GitHub</a>
         </div>
-        
         <div class="card">
           <h3>Ni Nancy Salon</h3>
           <p>Salon management app with booking, payment, and customer management features.</p>
           <a href="https://github.com/Manuubett/Saloon-.git" class="btn" target="_blank">View on GitHub</a>
         </div>
-        <section id="ngeno-site">
-  <h2>Johan Ngeno Website</h2>
-  <p>This is a personal apolitical website for Johan Ngeno.</p>
-  <a href="https://bett1298.github.io/Ngeno/" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; border-radius: 5px; text-decoration: none;">Visit Johan's Website</a>
-        </section>
-    
+      </div>
+    </section>
+
+    <section id="ngeno-site">
+      <h2>Johan Ngeno Website</h2>
+      <p>This is a personal apolitical website for Johan Ngeno.</p>
+      <a href="https://bett1298.github.io/Ngeno/" target="_blank" class="ngeno-button">Visit Johan's Website</a>
+    </section>
 
     <section id="skills">
       <h2>My Skills</h2>
@@ -273,18 +278,18 @@ o
     <footer>
       <p>&copy; 2025 Bett. All rights reserved.</p>
     </footer>
-
   </div>
 
   <script>
-    setTimeout(() => {
-      document.getElementById('splash').style.opacity = 0;
-      document.getElementById('main').classList.add('visible');
+    window.addEventListener("load", function () {
+      const splash = document.getElementById("splash");
+      const main = document.getElementById("main");
       setTimeout(() => {
-        document.getElementById('splash').style.display = 'none';
-      }, 1000);
-    }, 5000);
+        splash.style.opacity = 0;
+        main.classList.add("visible");
+      }, 2000);
+    });
   </script>
 
 </body>
-</html>0
+        </html>
